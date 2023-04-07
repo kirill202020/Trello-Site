@@ -1,0 +1,79 @@
+body {
+  background: #04ba71;
+  padding: 10px;
+  color: #F5F2EB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header .nav__list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 20px;
+}
+.header .nav__list .header__nav__item .users {
+  list-style-type: none;
+}
+.header .nav__list .header__nav__item .users img {
+  border-radius: 100%;
+  width: 30px;
+}
+.header .nav__list .header__nav__item__search {
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  background: #04454d;
+  opacity: 0.8;
+  color: #F5F2EB;
+  position: relative;
+}
+.header .nav__list .header__nav__item__search::after {
+  content: "url('img/mirror.svg')";
+  position: absolute;
+  width: 30px;
+  left: 20px;
+  top: 15px;
+}
+.header .nav__list .filter {
+  cursor: pointer;
+  background: #fdc827;
+  padding: 8px 12px;
+  border-radius: 50px;
+  color: #F5F2EB;
+  text-transform: uppercase;
+}
+.header .nav .create__task__btn {
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  border: none;
+  background: #fdc827;
+  color: #F5F2EB;
+}
+.header .nav .settings {
+  cursor: pointer;
+  background: #fdc827;
+  padding: 8px 12px;
+  border-radius: 50px;
+  color: #F5F2EB;
+  text-transform: uppercase;
+  border: none;
+}/*# sourceMappingURL=main.css.map */

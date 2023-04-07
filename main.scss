@@ -1,0 +1,110 @@
+// COLORS
+
+$mainColor: #04ba71;
+$secondColor: #04454d;
+$semiWhiteColor: #F5F2EB;
+$goldenColor: #fdc827;
+
+body{
+    background: $mainColor;
+    padding: 10px;
+    color: $semiWhiteColor;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.header{
+    margin-bottom: 15px;
+    .nav{
+        display: flex; 
+        justify-content: space-between;
+
+
+        &__list{
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            gap: 20px;
+
+
+            .header__nav__item{
+
+
+
+                .users{
+                    list-style-type: none;
+                    img{
+                        border-radius: 100%;
+                        width: 30px;
+                    }
+                }
+            }
+
+
+
+
+            .header__nav__item__search{
+                border-radius: 20px;
+                border: none;
+                padding: 10px;
+                height: 40px;
+                background: $secondColor;
+                opacity: 0.8;
+                color: $semiWhiteColor;
+                position: relative;
+
+
+
+
+
+                &::after{
+                    content: "url('img/mirror.svg')";
+                    position: absolute;
+                    width: 30px;
+                    left: 20px;
+                    top: 15px;
+                }
+            }
+
+            .filter{
+                cursor: pointer;
+                background: $goldenColor;
+                padding: 8px 12px;
+                border-radius: 50px;
+                color: $semiWhiteColor;
+                text-transform: uppercase;
+            }
+        }
+
+
+        .create__task__btn{
+            text-transform: uppercase;
+            padding: 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            border: none;
+            background: $goldenColor;
+            color: $semiWhiteColor;
+        }
+
+
+        .settings{
+            cursor: pointer;
+            background: $goldenColor;
+            padding: 8px 12px;
+            border-radius: 50px;
+            color: $semiWhiteColor;
+            text-transform: uppercase;
+            border: none;
+        }
+
+    }
+}

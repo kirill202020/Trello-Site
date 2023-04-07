@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="nav">
+                <img src="img/logo.jpg" alt="" class="logo">
+                <ul class="nav__list">
+                    <li class="header__nav__item create__item"><button class="btn create__task__btn">Add user</button></li>
+                    <li class="header__nav__item users__dropdown">
+                        <ul class="users">
+                            <!-- <li class="user"></li> -->
+                            <li><img src="img/user.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav__item search">
+                        <input class="header__nav__item__search" type="text" placeholder="Search...">
+                    </li>
+                    <li class="header__nav__item filter">Filter</li>
+                    <li class="header__nav__item"><button class="settings">Settings</button></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <section class="main__body">
+
+            <div class="container">
+
+                <div class="board__zone">
+
+                    <div class="board">
+
+                        <span class="board__name">To do</span>
+
+                        <button class="btn delete__task__btn">X</button>
+
+                        <button class="btn create__task__btn">+</button>
+
+                        <div class="tasks__zone">
+
+                            <div class="task__card"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="board">
+
+                        <span class="board__name">In progress</span>
+
+                        <button class="btn delete__task__btn">X</button>
+
+                        <button class="btn create__task__btn">+</button>
+
+                        <div class="tasks__zone">
+
+                        </div>
+
+                    </div>
+
+                    <div class="board">
+
+                        <span class="board__name">Done</span>
+
+                        <button class="btn delete__task__btn">X</button>
+
+                        <button class="btn create__task__btn">+</button>
+
+                        <div class="tasks__zone">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="js/scrypt.js"></script>
+</body>
+</html>
