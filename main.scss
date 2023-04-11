@@ -33,25 +33,20 @@ body{
             list-style-type: none;
             align-items: center;
             gap: 20px;
+        }
 
-
-            .header__nav__item{
-
-
-
-                .users{
-                    list-style-type: none;
-                    img{
-                        border-radius: 100%;
-                        width: 30px;
-                    }
+            
+            .users{
+                list-style-type: none;
+                img{
+                    border-radius: 100%;
+                    width: 30px;
                 }
             }
 
 
 
-
-            .header__nav__item__search{
+            .header__nav__input{
                 border-radius: 20px;
                 border: none;
                 padding: 10px;
@@ -61,28 +56,23 @@ body{
                 color: $semiWhiteColor;
                 position: relative;
 
-
-
-
-
-                &::after{
-                    content: "url('img/mirror.svg')";
-                    position: absolute;
-                    width: 30px;
-                    left: 20px;
-                    top: 15px;
-                }
+                // &::after{
+                //     content: "url('img/mirror.svg')";
+                //     position: absolute;
+                //     width: 30px;
+                //     left: 20px;
+                //     top: 15px;
+                // }
             }
 
             .filter{
                 cursor: pointer;
-                background: $goldenColor;
+                background: $secondColor;
                 padding: 8px 12px;
                 border-radius: 50px;
                 color: $semiWhiteColor;
                 text-transform: uppercase;
             }
-        }
 
 
         .create__task__btn{
@@ -91,14 +81,14 @@ body{
             border-radius: 30px;
             font-size: 13px;
             border: none;
-            background: $goldenColor;
+            background: $secondColor;
             color: $semiWhiteColor;
         }
 
 
         .settings{
             cursor: pointer;
-            background: $goldenColor;
+            background: $secondColor;
             padding: 8px 12px;
             border-radius: 50px;
             color: $semiWhiteColor;
@@ -107,4 +97,53 @@ body{
         }
 
     }
+}
+
+
+
+.board__zone{
+    display: flex;
+    gap: 30px;
+    border: 5px solid #055c67;
+    background: #03333a;
+    border-radius: 24px;
+    padding: 20px 10px;
+}    
+
+.board{
+    width: 300px;
+}
+
+
+.board__head{
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: $secondColor;
+    border: 2px solid $goldenColor;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.board__name{
+    text-transform: uppercase;
+    font-family: 'Roboto' 'Sans-Serif';
+}
+
+.task__btn{
+    width: 60px;
+    border-radius: 48px;
+    background: $goldenColor;
+    color: $mainColor;
+    border: none;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.create__task__btn{
+    margin-left: 20px;
+}
+
+.delete__task__btn{
+    margin-left: 10px;
 }

@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="header">
-
+    <header class="header">
         <div class="container">
             <div class="nav">
-                <img src="img/logo.jpg" alt="" class="logo">
+                <img src="img/Trello Copy.png" alt="" class="logo">
                 <ul class="nav__list">
                     <li class="header__nav__item create__item"><button class="btn create__task__btn">Add user</button></li>
                     <li class="header__nav__item users__dropdown">
@@ -22,76 +21,58 @@
                         </ul>
                     </li>
                     <li class="header__nav__item search">
-                        <input class="header__nav__item__search" type="text" placeholder="Search...">
+                        <input class="header__nav__input" type="text" placeholder="Search...">
                     </li>
                     <li class="header__nav__item filter">Filter</li>
                     <li class="header__nav__item"><button class="settings">Settings</button></li>
                 </ul>
             </div>
         </div>
-
-    </div>
-
-    <div class="main">
-
+    </header>
+    <main class="main">
         <section class="main__body">
-
             <div class="container">
-
                 <div class="board__zone">
-
                     <div class="board">
-
-                        <span class="board__name">To do</span>
-
-                        <button class="btn delete__task__btn">X</button>
-
-                        <button class="btn create__task__btn">+</button>
-
-                        <div class="tasks__zone">
-
-                            <div class="task__card"></div>
-
+                        <div class="board__head">
+                            <span class="board__name" contenteditable="true" spellcheck="true">To do</span>
+                            <div class="task__btn__zone">
+                                <button class="btn task__btn create__task__btn">+</button>
+                                <button class="btn task__btn delete__task__btn">X</button>
+                            </div>
                         </div>
-
+                        <div class="tasks__zone">
+                            <div class="task__card">
+                                
+                            </div>
+                        </div>
                     </div>
-
                     <div class="board">
-
-                        <span class="board__name">In progress</span>
-
-                        <button class="btn delete__task__btn">X</button>
-
-                        <button class="btn create__task__btn">+</button>
-
-                        <div class="tasks__zone">
-
+                        <div class="board__head">
+                            <span class="board__name" contenteditable="true" spellcheck="true">In progress</span>
+                            <div class="task__btn__zone">
+                                <button class="btn task__btn create__task__btn">+</button>
+                                <button class="btn task__btn delete__task__btn">X</button>
+                            </div>
                         </div>
-
+                        <div class="tasks__zone">
+                        </div>
                     </div>
-
                     <div class="board">
-
-                        <span class="board__name">Done</span>
-
-                        <button class="btn delete__task__btn">X</button>
-
-                        <button class="btn create__task__btn">+</button>
-
-                        <div class="tasks__zone">
-
+                        <div class="board__head">
+                            <span class="board__name" contenteditable="true" spellcheck="true">Done</span>
+                            <div class="task__btn__zone">
+                                <button class="btn task__btn create__task__btn">+</button>
+                                <button class="btn task__btn delete__task__btn">X</button>
+                            </div>
                         </div>
-
+                        <div class="tasks__zone">
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
-    </div>
-
+    </main>
     <script src="js/scrypt.js"></script>
 </body>
 </html>

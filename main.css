@@ -27,14 +27,14 @@ body {
   align-items: center;
   gap: 20px;
 }
-.header .nav__list .header__nav__item .users {
+.header .nav .users {
   list-style-type: none;
 }
-.header .nav__list .header__nav__item .users img {
+.header .nav .users img {
   border-radius: 100%;
   width: 30px;
 }
-.header .nav__list .header__nav__item__search {
+.header .nav .header__nav__input {
   border-radius: 20px;
   border: none;
   padding: 10px;
@@ -44,16 +44,9 @@ body {
   color: #F5F2EB;
   position: relative;
 }
-.header .nav__list .header__nav__item__search::after {
-  content: "url('img/mirror.svg')";
-  position: absolute;
-  width: 30px;
-  left: 20px;
-  top: 15px;
-}
-.header .nav__list .filter {
+.header .nav .filter {
   cursor: pointer;
-  background: #fdc827;
+  background: #04454d;
   padding: 8px 12px;
   border-radius: 50px;
   color: #F5F2EB;
@@ -65,15 +58,61 @@ body {
   border-radius: 30px;
   font-size: 13px;
   border: none;
-  background: #fdc827;
+  background: #04454d;
   color: #F5F2EB;
 }
 .header .nav .settings {
   cursor: pointer;
-  background: #fdc827;
+  background: #04454d;
   padding: 8px 12px;
   border-radius: 50px;
   color: #F5F2EB;
   text-transform: uppercase;
   border: none;
+}
+
+.board__zone {
+  display: flex;
+  gap: 30px;
+  border: 5px solid #055c67;
+  background: #03333a;
+  border-radius: 24px;
+  padding: 20px 10px;
+}
+
+.board {
+  width: 300px;
+}
+
+.board__head {
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: #04454d;
+  border: 2px solid #fdc827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board__name {
+  text-transform: uppercase;
+  font-family: "Roboto" "Sans-Serif";
+}
+
+.task__btn {
+  width: 60px;
+  border-radius: 48px;
+  background: #fdc827;
+  color: #04ba71;
+  border: none;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.create__task__btn {
+  margin-left: 20px;
+}
+
+.delete__task__btn {
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
