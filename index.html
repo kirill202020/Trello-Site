@@ -13,6 +13,7 @@
             <div class="nav">
                 <img src="img/Trello Copy.png" alt="" class="logo">
                 <ul class="nav__list">
+                    <li class="header__nav__item create"><button class="btn btn__create-board">Create board</button></li>
                     <li class="header__nav__item create__item"><button class="btn create__task__btn">Add user</button></li>
                     <li class="header__nav__item users__dropdown">
                         <ul class="users">
@@ -23,8 +24,8 @@
                     <li class="header__nav__item search">
                         <input class="header__nav__input" type="text" placeholder="Search...">
                     </li>
-                    <li class="header__nav__item filter">Filter</li>
-                    <li class="header__nav__item"><button class="settings">Settings</button></li>
+                    <li class="header__nav__item filter"><button class="btn btn-filter">Filter</button></li>
+                    <li class="header__nav__item"><button class="btn settings">Settings</button></li>
                 </ul>
             </div>
         </div>
@@ -73,6 +74,18 @@
             </div>
         </section>
     </main>
+
+    <div class="modal modal__window">
+        <h2 class="modal__h2_name">Name your board</h2>
+        <input class="modal__input" type="text">
+        <button class="btn btn__modal">Create board</button>
+    </div>
+
+
+    <script src="js/createBoard.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/LocalStorage.js"></script>
+
     <script src="js/scrypt.js"></script>
 </body>
 </html>
