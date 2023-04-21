@@ -17,8 +17,7 @@
                     <li class="header__nav__item create__item"><button class="btn create__task__btn">Add user</button></li>
                     <li class="header__nav__item users__dropdown">
                         <ul class="users">
-                            <!-- <li class="user"></li> -->
-                            <li><img src="img/user.jpg" alt=""></li>
+                            
                         </ul>
                     </li>
                     <li class="header__nav__item search">
@@ -34,42 +33,46 @@
         <section class="main__body">
             <div class="container">
                 <div class="board__zone">
-                    <div class="board">
-                        <div class="board__head">
-                            <span class="board__name" contenteditable="true" spellcheck="true">To do</span>
-                            <div class="task__btn__zone">
-                                <button class="btn task__btn create__task__btn">+</button>
-                                <button class="btn task__btn delete__task__btn">X</button>
+                    <div class="standard__boards">
+                        <div class="board">
+                            <div class="board__head">
+                                <span class="board__name" contenteditable="true" spellcheck="true">To do</span>
+                                <div class="task__btn__zone">
+                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn delete__task__btn">X</button>
+                                </div>
+                            </div>
+                            <div class="tasks__zone">
+                                <div class="task__card">
+                                    
+                                </div>
                             </div>
                         </div>
-                        <div class="tasks__zone">
-                            <div class="task__card">
-                                
+                        <div class="board">
+                            <div class="board__head">
+                                <span class="board__name" contenteditable="true" spellcheck="true">In progress</span>
+                                <div class="task__btn__zone">
+                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn delete__task__btn">X</button>
+                                </div>
+                            </div>
+                            <div class="tasks__zone">
+                            </div>
+                        </div>
+                        <div class="board">
+                            <div class="board__head">
+                                <span class="board__name" contenteditable="true" spellcheck="true">Done</span>
+                                <div class="task__btn__zone">
+                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn delete__task__btn">X</button>
+                                </div>
+                            </div>
+                            <div class="tasks__zone">
                             </div>
                         </div>
                     </div>
-                    <div class="board">
-                        <div class="board__head">
-                            <span class="board__name" contenteditable="true" spellcheck="true">In progress</span>
-                            <div class="task__btn__zone">
-                                <button class="btn task__btn create__task__btn">+</button>
-                                <button class="btn task__btn delete__task__btn">X</button>
-                            </div>
-                        </div>
-                        <div class="tasks__zone">
-                        </div>
-                    </div>
-                    <div class="board">
-                        <div class="board__head">
-                            <span class="board__name" contenteditable="true" spellcheck="true">Done</span>
-                            <div class="task__btn__zone">
-                                <button class="btn task__btn create__task__btn">+</button>
-                                <button class="btn task__btn delete__task__btn">X</button>
-                            </div>
-                        </div>
-                        <div class="tasks__zone">
-                        </div>
-                    </div>
+                    <div class="users__boards"></div>
+                    
                 </div>
             </div>
         </section>
@@ -85,6 +88,8 @@
     <script src="js/createBoard.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/LocalStorage.js"></script>
+    <script src="js/usersApi.js"></script>
+
 
     <script src="js/scrypt.js"></script>
 </body>

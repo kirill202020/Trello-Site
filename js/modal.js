@@ -2,6 +2,6 @@ function createModal() {
     modalWindow.style.display = 'flex'
 }
 
-function deleteModal() {
+function closeModal() {
     modalWindow.style.display = 'none'
 }

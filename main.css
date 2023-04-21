@@ -71,6 +71,10 @@ body {
   color: #F5F2EB;
 }
 
+.main {
+  position: relative;
+}
+
 .board__zone {
   display: flex;
   gap: 30px;
@@ -78,6 +82,13 @@ body {
   background: #03333a;
   border-radius: 24px;
   padding: 20px 10px;
+  position: absolute;
+  margin-right: 20px;
+}
+
+.standard__boards, .users__boards {
+  display: flex;
+  gap: 30px;
 }
 
 .board {
@@ -141,4 +152,27 @@ body {
   background: #066f7d;
   opacity: 0.8;
   color: #F5F2EB;
+}
+
+.user__pop-up {
+  display: none;
+  border-radius: 24px;
+  border: 2px solid #fdc827;
+  background: #04454d;
+  color: #F5F2EB;
+  width: 250px;
+  height: 80px;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  z-index: 2;
+}
+
+.user__li {
+  position: relative;
+}
+
+.user__li:hover > .user__pop-up {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

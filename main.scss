@@ -102,7 +102,9 @@ body{
     }
 }
 
-
+.main{
+    position: relative;
+}
 
 .board__zone{
     display: flex;
@@ -111,7 +113,15 @@ body{
     background: #03333a;
     border-radius: 24px;
     padding: 20px 10px;
+    position: absolute;
+    margin-right: 20px;
 }    
+
+.standard__boards, .users__boards{
+    display: flex;
+    gap: 30px;
+}
+
 
 .board{
     width: 300px;
@@ -178,4 +188,35 @@ body{
         color: $semiWhiteColor;
     }
     display: none;
+}
+
+
+
+// USER POP-UP
+
+.users{
+    
+}
+
+.user__pop-up{
+    display: none;
+    border-radius: 24px;
+    border: 2px solid $goldenColor;
+    background: $secondColor;
+    color: $semiWhiteColor;
+    width: 250px;
+    height: 80px;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    z-index: 2;
+}
+
+.user__li{
+    position: relative;   
+}
+
+.user__li:hover > .user__pop-up{
+    display: block;
 }
