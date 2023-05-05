@@ -28,17 +28,17 @@ modalApply.addEventListener('click', () =>{
     createBoard(boardName)
 })
 
-function createBoard(item) {
+function createBoard(item, index) {
     return `
         <div class="board">
             <div class="board__head">
                 <span class="board__name" contenteditable="true" spellcheck="true">${item.name}</span>
                 <div class="task__btn__zone">
                     <button class="btn task__btn create__task__btn">+</button>
-                    <button class="btn task__btn delete__task__btn">X</button>
+                    <button class="btn task__btn delete__board__btn" onclick='deleteBoard(${index})'>X</button>
                 </div>
             </div>
-            <div class="tasks__zone">
+            <div class="tasks__zone ${item.name}">
                 <div class="task__card">
                     
                 </div>

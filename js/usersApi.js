@@ -1,6 +1,6 @@
 const API__URL = 'https://randomuser.me/api/?results=1',
-      userList = document.querySelector('.users')
-
+      userList = document.querySelector('.users'),
+      addUserBtn = document.querySelector('.btn-add-user')
 
 
 function createNode (el) {
@@ -10,7 +10,21 @@ function createNode (el) {
 function append(parent, el){
     return parent.appendChild(el)
 }
-console.log(userList);
+
+addUserBtn.addEventListener('click', () =>{
+    let usersElement = document.querySelectorAll('.user__li')
+    if (usersElement.length < 10) {
+
+        newList()
+    }
+    if (usersElement.length > 1) {
+        usersElement.forEach(el => {
+            el.addEventListener('click', () =>{
+                el.remove()
+            })
+        })
+    }
+})
 
 
 const newList = () =>{
@@ -19,7 +33,6 @@ const newList = () =>{
     .then(function(data){
         let users = data.results
         console.log(users);
-        userList.innerHTML = ''
         return users.map(function(user) {
             let li = createNode('li')
             let div = createNode('div')
@@ -42,6 +55,9 @@ const newList = () =>{
     .catch(function(error){
         console.log(error);
     })
+
+
 }
+
 
 newList()
