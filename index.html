@@ -38,7 +38,7 @@
                             <div class="board__head">
                                 <span class="board__name" contenteditable="true" spellcheck="true">To do</span>
                                 <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
                                 </div>
                             </div>
                             <div class="tasks__zone">
@@ -51,7 +51,7 @@
                             <div class="board__head">
                                 <span class="board__name" contenteditable="true" spellcheck="true">In progress</span>
                                 <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
                                 </div>
                             </div>
                             <div class="tasks__zone">
@@ -61,7 +61,7 @@
                             <div class="board__head">
                                 <span class="board__name" contenteditable="true" spellcheck="true">Done</span>
                                 <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn">+</button>
+                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
                                 </div>
                             </div>
                             <div class="tasks__zone">
@@ -81,27 +81,32 @@
         <button class="btn btn__modal">Create board</button>
     </div>
 
-    <div class="modal modal__win create-task-modal">
+    <div class="modal task-modal modal__win create-task-modal">
         <h2 class="modal__h2_name">Name your task</h2>
         <input class="modal__input" type="text" id="task__name__input">
-        <label for="description">Describe your task</label>
+        <label for="description">Describe your task</label> 
         <input class="modal-descr" type="text" name="description">
         <select class="modal-choose">
-            <option value="">To do</option>
-            <option value="">In progress</option>
-            <option value="">Done</option>
+            <option value="To do">To do</option>
+            <option value="In progress">In progress</option>
+            <option value="Done">Done</option>
         </select>
         <label for="deadline">When is deadline for this task</label>
         <input class="deadline" type="date" name="deadline" id="">
         <button class="btn btn-task-modal">Create task</button>
     </div>
 
+    <!-- <div class="task-card">
+        <p class="name"></p>
+        <div class="tag"></div>
+    </div> -->
 
 
 
-    <script src="js/createBoard.js"></script>
-    <script src="js/modal.js"></script>
+
     <script src="js/LocalStorage.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/createBoard.js"></script>
     <script src="js/usersApi.js"></script>
     <script src="js/deleteBoard.js"></script>
     <script src="js/createTask.js"></script>
