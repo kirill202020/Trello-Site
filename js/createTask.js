@@ -3,7 +3,7 @@ const applyTask = document.querySelector('.btn-task-modal'),
       taskDescr = document.querySelector('.modal-descr'),
       modalChoose = document.querySelector('.modal-choose'),
       deadline = document.querySelector('.deadline'),
-      tasksZone = document.querySelector('.tasks__zone'),
+      tasksZone = document.querySelectorAll('.tasks__zone'),
       taskModal = document.querySelector('.task-modal'),
       createTaskBtn = document.querySelector('.create__task__btn')
 let tasksArr = []
@@ -28,6 +28,9 @@ function createTask() {
             </div>
         `
         modalTaskInput.value = ''
+
+        tasksZone
+
         tasksZone.innerHTML += task
     
     
