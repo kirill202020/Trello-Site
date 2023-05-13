@@ -6,8 +6,28 @@ function fillBoard() {
         });
     }
     tasksZone = document.querySelectorAll('.tasks__zone')
-
 }
+
+
+
+
+
+function fillTasks() {
+    if (tasks.length > 0) {
+        tasks.forEach((item, index) => {
+            tasksZone.forEach(element => {
+                if (item.id == element.id) {
+                    element.innerHTML += createTasks(item.name, item.tag, item.id)
+                }    
+            });
+            
+});
+}
+}
+
+
+
+
 
 
 
@@ -22,3 +42,4 @@ function fillUsers() {
 
 
 fillBoard()
+fillTasks()

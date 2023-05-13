@@ -37,7 +37,7 @@ const addStandardBoards = () =>{
                 <div class="board__head">
                     <span class="board__name" contenteditable="true" spellcheck="true">${boardName}</span>
                     <div class="task__btn__zone">
-                        <button class="btn task__btn create__task__btn" onclick="createTask()" id="zone${boardId}">+</button>
+                        <button class="btn task__btn create__task__btn" onclick="getInfoTask()" id="zone${boardId}">+</button>
                     </div>
                 </div>
                 <div class="tasks__zone" id="zone${boardId}">
@@ -73,7 +73,7 @@ function createBoard(item, index) {
             <div class="board__head">
                 <span class="board__name" contenteditable="true" spellcheck="true">${item.name}</span>
                 <div class="task__btn__zone">
-                    <button class="btn task__btn create__task__btn" onclick="createTask()" id="zone${index+3}">+</button>
+                    <button class="btn task__btn create__task__btn" onclick="getInfoTask()" id="zone${index+3}">+</button>
                     <button class="btn task__btn delete__board__btn" onclick='deleteBoard(${index})'>X</button>
                 </div>
             </div>
