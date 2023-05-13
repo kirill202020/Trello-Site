@@ -3,24 +3,28 @@ const applyTask = document.querySelector('.btn-task-modal'),
       taskDescr = document.querySelector('.modal-descr'),
       modalChoose = document.querySelector('.modal-choose'),
       deadline = document.querySelector('.deadline'),
-      tasksZone = document.querySelectorAll('.tasks__zone'),
       taskModal = document.querySelector('.task-modal'),
-      createTaskBtn = document.querySelector('.create__task__btn')
+      createTaskBtns = document.querySelectorAll('.create__task__btn')
 let tasksArr = []
+let btnId
 
+
+function getBtnId() {
+    createTaskBtns.forEach(el => {
+        el.addEventListener('click', () =>{
+            btnId = el.id
+        })
+    });
+    // console.log(btnId);
+}
 
 function createTask() {
     createTaskModal()
-
     applyTask.addEventListener('click', () =>{
         let taskName = modalTaskInput.value
         let taskDescription = taskDescr.value
         let taskTag = modalChoose.value
         let taskDate = deadline.value
-        console.log(taskName);
-        console.log(taskDescription);
-        console.log(taskTag);
-        console.log(taskDate);
         const task = `
             <div class="task-card">
                 <p class="name">${taskName}</p>
@@ -28,19 +32,20 @@ function createTask() {
             </div>
         `
         modalTaskInput.value = ''
+        taskDescr.value = ''
+        modalChoose.value = ''
+        deadline.value = ''
+        tasksZone = document.querySelectorAll('.tasks__zone')
+        tasksZone.forEach(element => {
+            if (btnId == element.id) {
+                element.innerHTML += task
+            }
+            return
+        });
 
-        tasksZone
-
-        tasksZone.innerHTML += task
-    
-    
         closeTaskModal()
     })
 }
-
-
-
-
 
 function TaskCon(name, description, tag, date) {
     this.name = name
@@ -49,6 +54,4 @@ function TaskCon(name, description, tag, date) {
     this.date = date
 }
 
-// applyTask.addEventListener('click', () =>{
-//     tasksArr += new TaskCon()
-// })
+getBtnId()

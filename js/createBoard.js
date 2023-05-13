@@ -37,13 +37,10 @@ const addStandardBoards = () =>{
                 <div class="board__head">
                     <span class="board__name" contenteditable="true" spellcheck="true">${boardName}</span>
                     <div class="task__btn__zone">
-                        <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
+                        <button class="btn task__btn create__task__btn" onclick="createTask()" id="zone${boardId}">+</button>
                     </div>
                 </div>
-                <div class="tasks__zone">
-                    <div class="task__card">
-                        
-                    </div>
+                <div class="tasks__zone" id="zone${boardId}">
                 </div>
             </div>
         `
@@ -66,7 +63,8 @@ modalApply.addEventListener('click', () =>{
     }
     modalInput.value = ''
     closeModal()
-    createBoard(boardName)
+    createBoard(boardName, boardId)
+    getBtnId()
 })
 
 function createBoard(item, index) {
@@ -75,14 +73,11 @@ function createBoard(item, index) {
             <div class="board__head">
                 <span class="board__name" contenteditable="true" spellcheck="true">${item.name}</span>
                 <div class="task__btn__zone">
-                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
+                    <button class="btn task__btn create__task__btn" onclick="createTask()" id="zone${index+3}">+</button>
                     <button class="btn task__btn delete__board__btn" onclick='deleteBoard(${index})'>X</button>
                 </div>
             </div>
-            <div class="tasks__zone ${item.name}">
-                <div class="task__card">
-                    
-                </div>
+            <div class="tasks__zone ${item.name}" id="zone${index+3}">
             </div>
         </div>
     `

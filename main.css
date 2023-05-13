@@ -209,6 +209,7 @@ body {
   border-radius: 12px;
   border: 1px solid #fdc827;
   text-align: left;
+  margin-top: 15px;
 }
 
 .task-modal {

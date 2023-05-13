@@ -32,7 +32,6 @@ const newList = () =>{
     .then((resp) => resp.json())
     .then(function(data){
         let users = data.results
-        console.log(users);
         return users.map(function(user) {
             let li = createNode('li')
             let div = createNode('div')
