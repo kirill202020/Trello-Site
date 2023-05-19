@@ -31,6 +31,12 @@ body {
   color: #F5F2EB;
   text-transform: uppercase;
 }
+.btn-apply-changes {
+  font-size: 18px;
+  width: 100px;
+  background: #055c67;
+  margin: auto 35px 30px auto;
+}
 
 .header {
   position: fixed;
@@ -199,7 +205,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100px;
   gap: 10px;
+}
+.tasks__zone:last-child {
+  margin-bottom: 70px;
 }
 
 .task-card {
@@ -222,4 +232,33 @@ body {
 .delete-task {
   height: 50px;
   width: 50px;
+}
+
+.tap-on-card {
+  width: 900px;
+  height: 700px;
+  color: #04454d;
+  border: #055c67;
+  display: flex;
+}
+.tap-on-card span {
+  margin-left: 20px;
+}
+.tap-on-card p {
+  font-size: 24px;
+  color: #F5F2EB;
+  margin-bottom: 40px;
+}
+
+.yourtask-text {
+  text-transform: uppercase;
+  color: #F5F2EB;
+  text-align: center;
+  font-size: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }/*# sourceMappingURL=main.css.map */

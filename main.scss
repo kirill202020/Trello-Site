@@ -41,6 +41,13 @@ body{
         text-transform: uppercase;
 
     }
+
+    &-apply-changes{
+        font-size: 18px;
+        width: 100px;
+        background: #055c67;
+        margin: auto 35px 30px auto;
+    }
 }
 
 .header{
@@ -239,7 +246,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100px;
     gap: 10px;
+
+    &:last-child{
+        margin-bottom: 70px;
+    }
 }
 
 
@@ -264,4 +276,53 @@ body{
 .delete-task{
     height: 50px;
     width: 50px;
+}
+
+
+
+.tap-on-card{
+    width: 900px;
+    height: 700px;
+    color: $secondColor;
+    border: #055c67;
+    display: flex;
+
+
+    span{
+        margin-left: 20px;
+    }
+
+    p{
+        font-size: 24px;
+        color: $semiWhiteColor;
+        margin-bottom: 40px;
+    }
+
+    // label{
+    //     color: $semiWhiteColor;
+    //     margin-top: 10px;
+    // }
+
+    // input{
+    //     border-radius: 20px;
+    //     border: none;
+    //     padding: 10px;
+    //     height: 40px;
+    //     background: #066f7d;
+    //     opacity: 0.8;
+    //     color: $semiWhiteColor;
+    // }
+}
+
+.yourtask-text{
+    text-transform: uppercase;
+    color: $semiWhiteColor;
+    text-align: center;
+    font-size: 30px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }

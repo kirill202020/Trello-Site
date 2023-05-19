@@ -24,7 +24,8 @@ function getInfoTask() {
         let taskDescription = taskDescr.value
         let taskTag = modalChoose.value
         let taskDate = deadline.value
-        let taskId = btnId
+        let taskBoardId = btnId
+        let taskId = tasks.length
         
         modalTaskInput.value = ''
         taskDescr.value = ''
@@ -33,24 +34,26 @@ function getInfoTask() {
         tasksZone = document.querySelectorAll('.tasks__zone')
         tasksZone.forEach(element => {
         if (btnId == element.id) {
-            tasks.push(new TaskCon(taskName, taskDescription, taskTag, taskDate, taskId))
+            tasks.push(new TaskCon(taskName, taskDescription, taskTag, taskDate, taskBoardId, taskId))
             element.innerHTML += createTasks(taskName, taskTag, taskId)
             btnId = ''
         }
         return
     });
         addLocalTasks()
-        closeTaskModal()    
+        closeTaskModal()  
+        dragDrop()  
     })
     
 }
 addLocalTasks()
 
-function TaskCon(name, description, tag, date, id) {
+function TaskCon(name, description, tag, date, boardId, id) {
     this.name = name
     this.description = description
     this.tag = tag
     this.date = date
+    this.boardId = boardId
     this.id = id
 }
 
