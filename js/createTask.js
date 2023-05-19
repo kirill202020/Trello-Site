@@ -18,7 +18,6 @@ function getBtnId() {
 }
 
 function getInfoTask() {
-    console.log(10);
     createTaskModal()
     applyTask.addEventListener('click', () =>{
         let taskName = modalTaskInput.value
@@ -55,11 +54,14 @@ function TaskCon(name, description, tag, date, id) {
     this.id = id
 }
 
-function createTasks(taskName, taskTag, taskId) {
+function createTasks(taskName, taskTag, taskId, index) {
     return `
     <div class="task-card" id="${taskId}">
-        <p class="name">${taskName}</p>
-        <div class="tag">${taskTag}</div>
+        <div class="card__info__part">
+            <p class="name">${taskName}</p>
+            <div class="tag">${taskTag}</div>
+        </div>
+        <button class="btn delete-task" onclick="deleteTask(${index})">X</button>
     </div>
 `
 }

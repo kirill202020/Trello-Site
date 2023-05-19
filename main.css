@@ -210,8 +210,16 @@ body {
   border: 1px solid #fdc827;
   text-align: left;
   margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .task-modal {
   display: none;
+}
+
+.delete-task {
+  height: 50px;
+  width: 50px;
 }/*# sourceMappingURL=main.css.map */

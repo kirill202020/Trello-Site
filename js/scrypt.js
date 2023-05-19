@@ -17,7 +17,7 @@ function fillTasks() {
         tasks.forEach((item, index) => {
             tasksZone.forEach(element => {
                 if (item.id == element.id) {
-                    element.innerHTML += createTasks(item.name, item.tag, item.id)
+                    element.innerHTML += createTasks(item.name, item.tag, item.id, index)
                 }    
             });
             
