@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trello-Copy</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -83,10 +83,11 @@
 
     <div class="modal task-modal modal__win create-task-modal">
         <h2 class="modal__h2_name">Name your task</h2>
-        <input class="modal__input" type="text" id="task__name__input">
+        <input class="modal__input" type="text" id="task__name__input" maxlength="20">
         <label for="description">Describe your task</label> 
-        <input class="modal-descr" type="text" name="description">
+        <input class="modal-descr" type="text" name="description" maxlength="200">
         <select class="modal-choose">
+            <option value="To do">Without any tag</option>
             <option value="To do">To do</option>
             <option value="In progress">In progress</option>
             <option value="Done">Done</option>
@@ -101,9 +102,9 @@
         <div class="tag"></div>
     </div> -->
 
-    <!-- <div class="modal tap-on-card">
+    <div class="modal tap-on-card">
         <span class="yourtask-text">Your Task</span>
-        <label for="name">Task Name:</label>
+        <!-- <label for="name">Task Name:</label>
         <input name="name" type="text" value="">
 
         <label for="descr">Task Description:</label>
@@ -113,15 +114,23 @@
         <input name="tag" type="option" value="">
 
         <label for="date">Task Deadline:</label>
-        <input name="date" type="date" value=""> 
+        <input name="date" type="date" value="">   -->
         <div class="info">
-            <p>Task Name:  <span contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Tag: <span contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Description: <span contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Deadline: <span contenteditable="true" spellcheck="true"></span></p>
+            <p>Task Name:  <span class="info-name" contenteditable="true" spellcheck="true"></span></p>
+            <p>Task Tag: <span class="info-tag" contenteditable="true" spellcheck="true"></span></p>
+            <p>Task Description: <span class="info-descr" contenteditable="true" spellcheck="true"></span></p>
+            <p>Task Deadline: <span class="info-date" contenteditable="true" spellcheck="true"></span></p>
         </div>
-        <button class="btn btn-apply-changes">Apply</button>
-    </div> -->
+        <button class="btn btn-apply-changes" onclick="closeTaskINfoModal()">Apply</button>
+    </div>
+
+
+    <div class="alert">
+        <span class="alert-span">You need to fill name and description</span>
+    </div>
+
+
+
 
 
 
@@ -133,7 +142,8 @@
     <script src="js/deleteBoard.js"></script>
     <script src="js/createTask.js"></script>
     <!-- <script src="js/drag.js"></script> -->
-    <!-- <script src="js/taskInfo.js"></script> -->
+    <script src="js/taskInfo.js"></script>
+    <script src="js/alerts.js"></script>
 
     <script src="js/scrypt.js"></script>
 </body>

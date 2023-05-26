@@ -223,6 +223,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .task-modal {
@@ -230,8 +231,8 @@ body {
 }
 
 .delete-task {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 
 .tap-on-card {
@@ -239,7 +240,7 @@ body {
   height: 700px;
   color: #04454d;
   border: #055c67;
-  display: flex;
+  display: none;
 }
 .tap-on-card span {
   margin-left: 20px;
@@ -261,4 +262,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.alert {
+  display: none;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: #04454d;
+  color: #F5F2EB;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }/*# sourceMappingURL=main.css.map */

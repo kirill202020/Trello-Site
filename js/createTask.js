@@ -25,26 +25,34 @@ function getInfoTask() {
         let taskTag = modalChoose.value
         let taskDate = deadline.value
         let taskBoardId = btnId
-        let taskId = tasks.length
-        
-        modalTaskInput.value = ''
-        taskDescr.value = ''
-        modalChoose.value = ''
-        deadline.value = 'To Do'
-        tasksZone = document.querySelectorAll('.tasks__zone')
-        tasksZone.forEach(element => {
-        if (btnId == element.id) {
-            tasks.push(new TaskCon(taskName, taskDescription, taskTag, taskDate, taskBoardId, taskId))
-            element.innerHTML += createTasks(taskName, taskTag, taskId)
-            btnId = ''
+        let taskId = tasks.length + 1
+        if (taskName && taskDescription) {
+                modalTaskInput.value = ''
+                taskDescr.value = ''
+                modalChoose.value = 'Without any tag'
+                deadline.value = ''
+                tasksZone = document.querySelectorAll('.tasks__zone')
+                tasksZone.forEach(element => {
+                if (btnId == element.id) {
+                    tasks.push(new TaskCon(taskName, taskDescription, taskTag, taskDate, taskBoardId, taskId))
+                    element.innerHTML += createTasks(taskName, taskTag, taskId)
+                    btnId = ''
+                }
+                return});
+                addLocalTasks()
+                closeTaskModal()  
+                // dragDrop()  
+        }else{
+            alert()
+            applyTask.style.background = '#d52626'
+            applyTask.attributes += 'disabled'
+            setTimeout(() => {
+                applyTask.style.background = '#04454d'
+                applyTask.attributes += 'enable'
+            }, 5000);
+            
         }
-        return
-    });
-        addLocalTasks()
-        closeTaskModal()  
-        // dragDrop()  
-        console.log('gettingInfo');
-    })
+})
     
 }
 addLocalTasks()
@@ -59,9 +67,8 @@ function TaskCon(name, description, tag, date, boardId, id) {
 }
 
 function createTasks(taskName, taskTag, taskId, index) {
-    console.log('createTask');
     return `
-    <div class="task-card"  id="${taskId}">
+    <div class="task-card" onclick="createTaskInfoModal(${taskId})" id="${taskId}">
         <div class="card__info__part">
             <p class="name">${taskName}</p>
             <div class="tag">${taskTag}</div>
@@ -70,7 +77,6 @@ function createTasks(taskName, taskTag, taskId, index) {
     </div>
 `
 }
-// onclick="createTaskInfoModal()"
 getBtnId()
 
 

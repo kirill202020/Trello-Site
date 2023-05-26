@@ -266,6 +266,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 
@@ -274,8 +275,8 @@ body{
 }
 
 .delete-task{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
 }
 
 
@@ -285,7 +286,7 @@ body{
     height: 700px;
     color: $secondColor;
     border: #055c67;
-    display: flex;
+    display: none;
 
 
     span{
@@ -325,4 +326,18 @@ body{
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+
+.alert{
+    display: none;
+    padding: 20px 30px;
+    border-radius: 12px;
+    background: $secondColor;
+    color: $semiWhiteColor;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
