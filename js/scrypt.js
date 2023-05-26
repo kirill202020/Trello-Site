@@ -18,12 +18,14 @@ function fillTasks() {
             tasksZone.forEach(element => {
                 if (item.id == element.id) {
                     element.innerHTML += createTasks(item.name, item.tag, item.id, index)
+                    console.log('fillTask');
                 }    
             });
             
 });
 }
-dragDrop()
+// dragDrop()
+console.log('fill');
 }
 
 

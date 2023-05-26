@@ -42,7 +42,8 @@ function getInfoTask() {
     });
         addLocalTasks()
         closeTaskModal()  
-        dragDrop()  
+        // dragDrop()  
+        console.log('gettingInfo');
     })
     
 }
@@ -58,8 +59,9 @@ function TaskCon(name, description, tag, date, boardId, id) {
 }
 
 function createTasks(taskName, taskTag, taskId, index) {
+    console.log('createTask');
     return `
-    <div class="task-card" id="${taskId}">
+    <div class="task-card"  id="${taskId}">
         <div class="card__info__part">
             <p class="name">${taskName}</p>
             <div class="tag">${taskTag}</div>
@@ -68,7 +70,7 @@ function createTasks(taskName, taskTag, taskId, index) {
     </div>
 `
 }
-
+// onclick="createTaskInfoModal()"
 getBtnId()
 
 

@@ -12,4 +12,5 @@ const deleteTask = index =>{
         element.innerHTML = ''
     });
     fillTasks()
+    console.log('deleteTask');
 }
