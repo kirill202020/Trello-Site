@@ -33,7 +33,7 @@ const addStandardBoards = () =>{
         let boardId = el.id
         mainBoard.push(new ObjCon(boardName, boardId))
         standardBoardsZone.innerHTML += `
-            <div class="board">
+            <div class="board list">
                 <div class="board__head">
                     <span class="board__name" contenteditable="true" spellcheck="true">${boardName}</span>
                     <div class="task__btn__zone">
@@ -69,7 +69,7 @@ modalApply.addEventListener('click', () =>{
 
 function createBoard(item, index) {
     return `
-        <div class="board">
+        <div class="board list">
             <div class="board__head">
                 <span class="board__name" contenteditable="true" spellcheck="true">${item.name}</span>
                 <div class="task__btn__zone">
@@ -82,3 +82,4 @@ function createBoard(item, index) {
         </div>
     `
 }
+

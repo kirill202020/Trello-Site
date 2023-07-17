@@ -15,14 +15,17 @@ function fillBoard() {
 function fillTasks() {
     if (tasks.length > 0) {
         tasks.forEach((item, index) => {
+            console.log(index);
             tasksZone.forEach(element => {
+                console.log(index);
                 if (item.boardId == element.id) {
                     element.innerHTML += createTasks(item.name, item.tag, item.id, index)
-                }});});}
+                }
+            taskList = new List('usersboards', options);
+            });});}
 // dragDrop()
+
 }
-
-
 
 
 

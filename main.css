@@ -1,7 +1,17 @@
 body {
-  background: #04ba71;
   padding: 10px;
-  color: #F5F2EB;
+}
+body.light {
+  background: #04ba71;
+  color: #f5f2eb;
+}
+body.dark {
+  background: #000;
+  color: #d9d9d9;
+}
+body.blue {
+  background: #02172e;
+  color: #88cec8;
 }
 
 * {
@@ -18,7 +28,7 @@ body {
   padding: 8px 12px;
   border-radius: 50px;
   border: none;
-  color: #F5F2EB;
+  color: #f5f2eb;
   text-transform: uppercase;
 }
 .btn__modal {
@@ -28,7 +38,7 @@ body {
   align-self: self-end;
   border-radius: 12px;
   padding: 10px;
-  color: #F5F2EB;
+  color: #f5f2eb;
   text-transform: uppercase;
 }
 .btn-apply-changes {
@@ -63,7 +73,7 @@ body {
   height: 40px;
   background: #04454d;
   opacity: 0.8;
-  color: #F5F2EB;
+  color: #f5f2eb;
   position: relative;
 }
 .header .nav .create__task__btn {
@@ -73,7 +83,7 @@ body {
   font-size: 13px;
   border: none;
   background: #04454d;
-  color: #F5F2EB;
+  color: #f5f2eb;
 }
 
 .main {
@@ -92,7 +102,8 @@ body {
   margin-right: 20px;
 }
 
-.standard__boards, .users__boards {
+.standard__boards,
+.users__boards {
   display: flex;
   gap: 30px;
 }
@@ -157,7 +168,7 @@ body {
   height: 40px;
   background: #066f7d;
   opacity: 0.8;
-  color: #F5F2EB;
+  color: #f5f2eb;
 }
 
 .users {
@@ -174,7 +185,7 @@ body {
   border-radius: 24px;
   border: 2px solid #fdc827;
   background: #04454d;
-  color: #F5F2EB;
+  color: #f5f2eb;
   width: 250px;
   height: 80px;
   padding: 20px;
@@ -247,13 +258,13 @@ body {
 }
 .tap-on-card p {
   font-size: 24px;
-  color: #F5F2EB;
+  color: #f5f2eb;
   margin-bottom: 40px;
 }
 
 .yourtask-text {
   text-transform: uppercase;
-  color: #F5F2EB;
+  color: #f5f2eb;
   text-align: center;
   font-size: 30px;
 }
@@ -269,10 +280,75 @@ body {
   padding: 20px 30px;
   border-radius: 12px;
   background: #04454d;
-  color: #F5F2EB;
+  color: #f5f2eb;
   justify-content: center;
   align-items: center;
   position: absolute;
   right: 20px;
   bottom: 20px;
+}
+
+.settings-modal {
+  width: 400px;
+  height: 90vh;
+  position: fixed;
+  right: 30px;
+  top: 65px;
+  background: #04454d;
+  border-radius: 24px;
+  padding: 25px;
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+.settings-title {
+  font-size: 32px;
+  text-align: center;
+}
+.settings-close {
+  position: absolute;
+  top: 21px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  background: #04ba71;
+  color: #f5f2eb;
+}
+
+.tags-ul {
+  list-style-type: none;
+}
+
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.theme-btn {
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.theme-light {
+  background: #04ba71;
+  color: #f5f2eb;
+}
+.theme-dark {
+  background: #000;
+  color: #d9d9d9;
+}
+.theme-blue {
+  background: #02172e;
+  color: #88cec8;
+}
+
+.task-card.dragging {
+  opacity: 0.5;
 }/*# sourceMappingURL=main.css.map */

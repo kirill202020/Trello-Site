@@ -1,110 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trello-Copy</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <img src="img/Trello Copy.png" alt="" class="logo">
-                <ul class="nav__list">
-                    <li class="header__nav__item create"><button class="btn btn__create-board">Create board</button></li>
-                    <li class="header__nav__item create__item"><button class="btn btn-add-user">Add user</button></li>
-                    <li class="header__nav__item users__dropdown">
-                        <ul class="users">
-                            
-                        </ul>
-                    </li>
-                    <li class="header__nav__item search">
-                        <input class="header__nav__input" type="text" placeholder="Search...">
-                    </li>
-                    <li class="header__nav__item filter"><button class="btn btn-filter">Filter</button></li>
-                    <li class="header__nav__item"><button class="btn settings">Settings</button></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="main__body">
-            <div class="container">
-                <div class="board__zone">
-                    <div class="standard__boards">
-                        <div class="board">
-                            <div class="board__head">
-                                <span class="board__name" contenteditable="true" spellcheck="true">To do</span>
-                                <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
-                                </div>
-                            </div>
-                            <div class="tasks__zone" id="zone1">
-                                <div class="task__card">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="board">
-                            <div class="board__head">
-                                <span class="board__name" contenteditable="true" spellcheck="true">In progress</span>
-                                <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
-                                </div>
-                            </div>
-                            <div class="tasks__zone" id="zone2">
-                            </div>
-                        </div>
-                        <div class="board">
-                            <div class="board__head">
-                                <span class="board__name" contenteditable="true" spellcheck="true">Done</span>
-                                <div class="task__btn__zone">
-                                    <button class="btn task__btn create__task__btn" onclick="createTask()">+</button>
-                                </div>
-                            </div>
-                            <div class="tasks__zone" id="zone3">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="users__boards"></div>
-                    
-                </div>
-            </div>
-        </section>
-    </main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Trello-Copy</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="light">
+		<header class="header">
+			<div class="container">
+				<div class="nav">
+					<img src="img/Trello Copy.png" alt="" class="logo" />
+					<ul class="nav__list">
+						<li class="header__nav__item create">
+							<button class="btn btn__create-board">Create board</button>
+						</li>
+						<li class="header__nav__item create__item">
+							<button class="btn btn-add-user">Add user</button>
+						</li>
+						<li class="header__nav__item users__dropdown">
+							<ul class="users"></ul>
+						</li>
+						<li class="header__nav__item">
+							<input
+								class="header__nav__input search"
+								type="search"
+								placeholder="Search..."
+							/>
+						</li>
+						<li class="header__nav__item filter">
+							<button class="btn btn-filter">Filter</button>
+						</li>
+						<li class="header__nav__item">
+							<button class="btn settings" onclick="openSettings()">
+								Settings
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="main__body">
+				<div class="container">
+					<div class="board__zone" id="usersboards">
+						<div class="standard__boards">
+							<div class="board">
+								<div class="board__head">
+									<span
+										class="board__name"
+										contenteditable="true"
+										spellcheck="true"
+										>To do</span
+									>
+									<div class="task__btn__zone">
+										<button
+											class="btn task__btn create__task__btn"
+											onclick="createTask()"
+										>
+											+
+										</button>
+									</div>
+								</div>
+								<div class="tasks__zone" id="zone1">
+									<div class="task__card"></div>
+								</div>
+							</div>
+							<div class="board">
+								<div class="board__head">
+									<span
+										class="board__name"
+										contenteditable="true"
+										spellcheck="true"
+										>In progress</span
+									>
+									<div class="task__btn__zone">
+										<button
+											class="btn task__btn create__task__btn"
+											onclick="createTask()"
+										>
+											+
+										</button>
+									</div>
+								</div>
+								<div class="tasks__zone" id="zone2"></div>
+							</div>
+							<div class="board">
+								<div class="board__head">
+									<span
+										class="board__name"
+										contenteditable="true"
+										spellcheck="true"
+										>Done</span
+									>
+									<div class="task__btn__zone">
+										<button
+											class="btn task__btn create__task__btn"
+											onclick="createTask()"
+										>
+											+
+										</button>
+									</div>
+								</div>
+								<div class="tasks__zone" id="zone3"></div>
+							</div>
+						</div>
+						<div class="users__boards"></div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <div class="modal modal__window">
-        <h2 class="modal__h2_name">Name your board</h2>
-        <input class="modal__input" type="text">
-        <button class="btn btn__modal">Create board</button>
-    </div>
+		<div class="modal modal__window">
+			<h2 class="modal__h2_name">Name your board</h2>
+			<input class="modal__input" type="text" />
+			<button class="btn btn__modal">Create board</button>
+		</div>
 
-    <div class="modal task-modal modal__win create-task-modal">
-        <h2 class="modal__h2_name">Name your task</h2>
-        <input class="modal__input" type="text" id="task__name__input" maxlength="20">
-        <label for="description">Describe your task</label> 
-        <input class="modal-descr" type="text" name="description" maxlength="200">
-        <select class="modal-choose">
-            <option value="To do">Without any tag</option>
-            <option value="To do">To do</option>
-            <option value="In progress">In progress</option>
-            <option value="Done">Done</option>
-        </select>
-        <label for="deadline">When is deadline for this task</label>
-        <input class="deadline" type="date" name="deadline" id="">
-        <button class="btn btn-task-modal">Create task</button>
-    </div>
+		<div class="modal task-modal modal__win create-task-modal">
+			<h2 class="modal__h2_name">Name your task</h2>
+			<input
+				class="modal__input"
+				type="text"
+				id="task__name__input"
+				maxlength="20"
+			/>
+			<label for="description">Describe your task</label>
+			<input
+				class="modal-descr"
+				type="text"
+				name="description"
+				maxlength="200"
+			/>
+			<select class="modal-choose">
+				<option value="any tag">Without any tag</option>
+				<option value="Work">Work</option>
+				<option value="Home">Home</option>
+				<option value="Study">Study</option>
+				<option value="Friends">Friends</option>
+			</select>
+			<label for="deadline">When is deadline for this task</label>
+			<input class="deadline" type="date" name="deadline" id="" />
+			<button class="btn btn-task-modal">Create task</button>
+		</div>
 
-    <!-- <div class="task-card">
+		<!-- <div class="task-card">
         <p class="name"></p>
         <div class="tag"></div>
     </div> -->
 
-    <div class="modal tap-on-card">
-        <span class="yourtask-text">Your Task</span>
-        <!-- <label for="name">Task Name:</label>
+		<div class="modal tap-on-card">
+			<span class="yourtask-text">Your Task</span>
+			<!-- <label for="name">Task Name:</label>
         <input name="name" type="text" value="">
 
         <label for="descr">Task Description:</label>
@@ -115,36 +163,84 @@
 
         <label for="date">Task Deadline:</label>
         <input name="date" type="date" value="">   -->
-        <div class="info">
-            <p>Task Name:  <span class="info-name" contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Tag: <span class="info-tag" contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Description: <span class="info-descr" contenteditable="true" spellcheck="true"></span></p>
-            <p>Task Deadline: <span class="info-date" contenteditable="true" spellcheck="true"></span></p>
-        </div>
-        <button class="btn btn-apply-changes" onclick="closeTaskINfoModal()">Apply</button>
-    </div>
+			<div class="info">
+				<p>
+					Task Name:
+					<span
+						class="info-name"
+						contenteditable="true"
+						spellcheck="true"
+					></span>
+				</p>
+				<p>
+					Task Tag:
+					<span
+						class="info-tag"
+						contenteditable="true"
+						spellcheck="true"
+					></span>
+				</p>
+				<p>
+					Task Description:
+					<span
+						class="info-descr"
+						contenteditable="true"
+						spellcheck="true"
+					></span>
+				</p>
+				<p>
+					Task Deadline:
+					<span
+						class="info-date"
+						contenteditable="true"
+						spellcheck="true"
+					></span>
+				</p>
+			</div>
+			<button class="btn btn-apply-changes" onclick="closeTaskINfoModal()">
+				Apply
+			</button>
+		</div>
 
+		<div class="alert">
+			<span class="alert-span">You need to fill name and description</span>
+		</div>
 
-    <div class="alert">
-        <span class="alert-span">You need to fill name and description</span>
-    </div>
+		<div class="settings-modal">
+			<span class="settings-title">Settings</span>
+			<button class="settings-close" onclick="closeSettings()">X</button>
+			<div class="tags">
+				<h2 class="tags-title">Control tags</h2>
+				<ul class="tags-ul">
+					<li>Work</li>
+					<li>Home</li>
+					<li>Study</li>
+					<li>Friends</li>
+				</ul>
+			</div>
+			<div class="background">
+				<h2 class="bg-title">Choose Backgroung</h2>
+				<div class="themes">
+					<button class="theme-btn theme-light">Standart Theme</button>
+					<button class="theme-btn theme-dark">Dark Theme</button>
+					<button class="theme-btn theme-blue">Blue Theme</button>
+				</div>
+			</div>
+		</div>
 
+		<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+		<script src="js/LocalStorage.js"></script>
+		<script src="js/searching.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/createBoard.js"></script>
+		<script src="js/usersApi.js"></script>
+		<script src="js/deleteBoard.js"></script>
+		<script src="js/createTask.js"></script>
+		<script src="js/drag.js"></script>
+		<script src="js/taskInfo.js"></script>
+		<script src="js/alerts.js"></script>
+		<script src="js/themes.js"></script>
 
-
-
-
-
-
-    <script src="js/LocalStorage.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/createBoard.js"></script>
-    <script src="js/usersApi.js"></script>
-    <script src="js/deleteBoard.js"></script>
-    <script src="js/createTask.js"></script>
-    <!-- <script src="js/drag.js"></script> -->
-    <script src="js/taskInfo.js"></script>
-    <script src="js/alerts.js"></script>
-
-    <script src="js/scrypt.js"></script>
-</body>
+		<script src="js/scrypt.js"></script>
+	</body>
 </html>

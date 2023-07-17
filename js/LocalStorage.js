@@ -17,6 +17,7 @@ const addLocal = () =>{
 }
 const addLocalTasks = () =>{
     localStorage.setItem('tasks', JSON.stringify(tasks))
+    // fillTasks()
 }
 const addLocalUsers = () =>{
     localStorage.setItem('user', JSON.stringify(users))
